@@ -1,0 +1,25 @@
+.footer {
+  background: #f4f4f2;
+  .footer_top {
+    padding: 80px 0;
+  }
+  .hr {
+    height: 1px;
+    background: $colorXanh;
+    opacity: 0.75;
+  }
+  .footer_bottom {
+    padding: 20px 0 80px;
+    span {
+      color: $colorXanh;
+      font-size: 16px;
+    }
+  }
+
+  .footer-title {
+    font-weight: 900; // dùng Black
+    text-transform: uppercase;
+  }
+}
+
+
