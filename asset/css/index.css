@@ -1,17 +1,166 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @import 'font';
- *   |         ^^^^^^
- *   '
- *   asset\scss\index.scss 2:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import 'font';\d\a   \2502          ^^^^^^\a   \2575 \a   asset\\scss\\index.scss 2:9  root stylesheet";
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
 }
+
+.color-xanh {
+  color: #026835 !important;
+}
+
+.footer {
+  background: #f4f4f2;
+}
+.footer .footer_top {
+  padding: 80px 0;
+}
+.footer .hr {
+  height: 1px;
+  background: #026835;
+  opacity: 0.75;
+}
+.footer .footer_bottom {
+  padding: 20px 0 80px;
+}
+.footer .footer_bottom span {
+  color: #026835;
+  font-size: 16px;
+}
+.footer .footer-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #026835;
+  display: inline-block;
+}
+.footer .footer-title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background: #026835;
+  margin-top: 4px;
+}
+.footer .footer-main__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+}
+.footer {
+  /* Newsletter CP */
+}
+.footer .footer-newsletter {
+  max-width: 420px;
+  flex: 0 0 420px;
+}
+.footer .footer-form {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 20px 0;
+}
+.footer .footer-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 40px;
+  border: none;
+  background: #fff;
+  font-size: 14px;
+  color: #1b2b3a;
+}
+.footer .footer-form input::placeholder {
+  color: #9ea9a1;
+}
+.footer .footer-form input:focus {
+  outline: none;
+}
+.footer .footer-form button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 14px 24px;
+  border-radius: 40px;
+  border: none;
+  background: #0f6038;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.footer .footer-form button:hover {
+  background: #0c522f;
+}
+.footer .footer-form button:focus {
+  outline: none;
+}
+.footer .footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.footer .footer-social .social-item {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #026835;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #026835;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+.footer .footer-social .social-item i {
+  color: inherit;
+}
+.footer .footer-social .social-item:hover {
+  background: #026835;
+  color: #fff;
+}
+.footer {
+  /* Right menu */
+}
+.footer .footer-links {
+  display: flex;
+  gap: 60px;
+  flex: 1;
+}
+.footer .footer-links .footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .footer-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer .footer-col a {
+  color: #1d2c23;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer .footer-col a:hover {
+  color: #0f6038;
+}
+.footer {
+  /* Responsive */
+}
+@media (max-width: 992px) {
+  .footer .footer-main__inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=index.css.map */

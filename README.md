@@ -10,6 +10,6 @@
 
 * run
 ```bash
-npm install 
+npm install -g sass
 npm run sass
 ```
