@@ -175,14 +175,13 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
     width: 100%;
+    gap: 0;
+    row-gap: 30px;
   }
   .footer .footer-links .footer-col {
     flex: 0 0 50%;
     max-width: 50%;
-    background: rgba(255, 0, 0, 0.1);
-    border: 1px solid red;
   }
   .footer .footer-links .footer-col .footer-title {
     font-size: 14px;
