@@ -28,7 +28,7 @@
     &::after {
       content: "";
       display: block;
-      width: 50%;
+      width: 100px;
       height: 1px;
       background: $colorXanh;
       margin-top: 4px;
@@ -44,10 +44,10 @@
   }
 
   /* Newsletter CP */
-  .footer-newsletter {
-    max-width: 420px;
-    flex: 0 0 420px;
-  }
+  //.footer-newsletter {
+  //  max-width: 420px;
+  //  flex: 0 0 420px;
+  //}
 
   .footer-form {
     position: relative;
@@ -163,5 +163,55 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px; // tránh sát mép
+  }
+
+  .footer-main__inner {
+    flex-direction: column;
+    gap: 32px; // spacing vừa phải
+  }
+
+  .footer-newsletter {
+    max-width: 100%; // bỏ fixed width desktop
+  }
+
+  .footer-form {
+    max-width: 100%;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .footer .footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    .footer-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      background: rgba(255,0,0,0.1);
+      border: 1px solid red;
+      .footer-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      a {
+        display: block; // full width để tap dễ
+        font-size: 14px;
+        line-height: 1.45;
+      }
+    }
+  }
+}
+
+
 
 
