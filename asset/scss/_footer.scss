@@ -1,17 +1,125 @@
-.footer {
+.doctor_section {
+  box-shadow: 4px 0 16px #888888;
+  .doctor_heading {
+    margin-bottom: 80px;
+    p {
+      margin: 15px 0 30px;
+    }
+  }
 
+  .doctor_card {
+    position: relative;
+  }
+
+  .doctor_form_wrap {
+    position: relative;
+    .form_title {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 1;
+      background: #006837;
+      color: #fff;
+      padding: 18px 46px;
+      border-radius: 12px;
+      span {
+        display: block;
+        margin-top: 6px;
+        color: white;
+      }
+    }
+    .doctor_form_box {
+      background: #eef6f1;
+      border-radius: 20px;
+      padding: 120px 32px 40px;
+
+    }
+  }
+
+  /* AVATAR */
+  .doctor_avatar {
+    text-align: center;
+    position: absolute;
+    top: -60px; /* Điều này giúp đẩy avatar trồi lên */
+    left: 100px;
+    z-index: 1;
+  }
+
+  .doctor_avatar img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .doctor_avatar h4 {
+    margin-top: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f6038;
+  }
+
+  .doctor_avatar p {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #777;
+  }
+
+  .doctor_form {
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr) auto;
+    gap: 24px;
+    align-items: center;
+    .form_group input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      outline: none;
+      transition: 0.2s;
+
+      &:focus {
+        border-color: #0f6038;
+      }
+    }
+
+    /* Submit button */
+    .btn_submit {
+      padding: 16px 40px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(90deg, #9acb45, #006837);
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+}
+
+.footer {
   .footer_info {
     padding: 80px 0;
     .footer_info_main {
-      display: flex;
-      gap: 16px;
+      display: grid;
+      gap: 30px;
       margin-top: 30px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       .footer_info_main-item {
         display: flex;
         gap: 16px;
         align-items: center;
-        flex: 0 0 calc(33.33% - 8px);
-        max-width: calc(33.33% - 8px);
         .info_icon {
           width: 38px;
           height: 38px;
@@ -176,13 +284,34 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .footer {
-    background: #f4f4f2;
-    padding: 80px 0;
-
-    .container {
-      border: 1px solid red;
+  .doctor_section {
+    .doctor_form {
+      display: grid;
+      grid-template-columns:  repeat(3, 1fr);
     }
+  }
+
+  .footer {
+    .container {
+    }
+    .footer_info {
+      padding: 40px 0;
+      h2 {
+        text-align: center;
+      }
+      .footer_info_main {
+        .footer_info_main-item {
+          flex-direction: column;
+          text-align: center;
+
+        }
+      }
+    }
+    .footer-main {
+      padding: 40px 0;
+    }
+
+
 
     .footer_top {
       display: flex;
@@ -211,9 +340,35 @@
 }
 
 @media (max-width: 767px) {
+  .doctor_section {
+    .doctor_form {
+      display: grid;
+      grid-template-columns:  repeat(1, 1fr);
+    }
+    .doctor_form_wrap {
+      .form_title {
+        width: 75%;
+      }
+      .doctor_form_box {
+        padding: 100px 16px 40px;
+        .doctor_form {
+          .form_group input {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
   .footer {
     .footer-main {
       padding: 40px 0;
+    }
+    .footer_info {
+      padding: 40px 0;
+      .footer_info_main {
+        grid-template-columns: 1fr;
+      }
     }
     .footer_top {
       flex-direction: column;

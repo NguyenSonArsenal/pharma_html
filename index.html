@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo HTML + SCSS</title>
+  <title>Pharma</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="asset/css/index.css">
 </head>
@@ -13,28 +13,80 @@
 </header>
 
 <main class="main">
+  <section class="section doctor_section">
+    <div class="container">
+
+      <!-- Title -->
+      <div class="doctor_heading">
+        <h2 class="text_xanh text_center">
+          Đội Ngũ Bác Sĩ Giàu Chuyên Môn Luôn Sẵn Sàng Hỗ Trợ Bạn
+        </h2>
+        <p class="text_center">
+          Nếu bạn đang có thắc mắc về bệnh của mình hay sản phẩm.
+        </p>
+      </div>
+
+      <div class="doctor_card">
+        <div class="doctor_avatar">
+          <img src="asset/image/user_avatar.png" alt="Bác sĩ chuyên môn">
+          <h4><b>Nguyễn Tiến Dũng</b></h4>
+          <p>Cố vấn chuyên môn</p>
+        </div>
+
+        <div class="doctor_form_wrap">
+          <div class="form_title">
+            <h3>ĐĂNG KÝ TƯ VẤN</h3>
+            <span>(Hoàn toàn miễn phí)</span>
+          </div>
+
+          <div class="doctor_form_box">
+            <form class="doctor_form">
+              <div class="form_group required_inline">
+                <input type="text" placeholder="Họ và tên *" required>
+              </div>
+
+              <div class="form_group">
+                <input type="text" placeholder="Số điện thoại *" required>
+              </div>
+
+              <div class="form_group">
+                <input type="text" placeholder="Nội dung (không bắt buộc)">
+              </div>
+
+              <button type="submit" class="btn_submit">ĐĂNG KÝ</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
   <footer class="footer">
     <div class="footer_info">
       <div class="container">
-        <h2 class="text-xanh">LONGEVITY MEDICAL CENTER</h2>
+        <h2 class="text_xanh">LONGEVITY MEDICAL CENTER</h2>
         <div class="footer_info_main">
           <div class="footer_info_main-item">
             <div>
-              <i class="info_icon fab fa-facebook-f"></i>
+              <i class="social-icon fa-solid fa-location-dot"></i>
             </div>
             <div><b>Địa chỉ:</b> 59 Ngô Thì Nhậm, Phường Hai Bà Trưng, Thành phố Hà Nội</div>
           </div>
           <div class="footer_info_main-item">
             <div>
-              <i class="info_icon fab fa-facebook-f"></i>
+              <i class="social-icon fa-solid fa-phone-volume"></i>
             </div>
             <div>
               <div>Nếu có thắc mắc hoặc cần hỗ trợ</div>
-              <div><b>Liên hệ ngay:</b>0559 188 888</div>
+              <div><b>Liên hệ ngay:</b> 0559 188 888</div>
             </div>
           </div>
           <div class="footer_info_main-item">
-            <div><i class="info_icon fab fa-facebook-f"></i></div>
+            <div><i class="social-icon fa-solid fa-clock"></i></div>
             <div>
               <b>Giờ mở cửa</b> <br>
               <span>08:00 - 17:00 (thứ Hai đến thứ Bảy)</span>
@@ -57,11 +109,11 @@
             </form>
 
             <div class="footer-social">
-              <a href="#" class="social-item"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-item"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="social-item"><i class="fab fa-tiktok"></i></a>
-              <a href="#" class="social-item"><i class="fas fa-phone"></i></a>
-              <a href="#" class="social-item"><i class="fas fa-store"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-facebook-f"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-youtube"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-tiktok"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-phone"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-store"></i></a>
             </div>
           </div>
 
@@ -96,7 +148,7 @@
         <div class="hr"></div>
 
         <!-- Bottom -->
-        <div class="footer_bottom text-center font-medium text-xanh">
+        <div class="footer_bottom text_center font-medium text_xanh">
           Copy right by © 2024–2025 LONGEVITY PHARMA, Inc.
         </div>
       </div>
