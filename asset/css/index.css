@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .font-medium {
   font-weight: 500;
 }
@@ -114,10 +113,10 @@ body {
   box-shadow: 4px 0 16px #888888;
 }
 .doctor_section .doctor_heading {
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .doctor_section .doctor_heading p {
-  margin: 15px 0 30px;
+  margin: 15px 0 0px;
 }
 .doctor_section .doctor_card {
   position: relative;
@@ -127,14 +126,14 @@ body {
 }
 .doctor_section .doctor_form_wrap .form_title {
   position: absolute;
-  top: -35px;
+  top: -44px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   z-index: 1;
   background: #006837;
   color: #fff;
-  padding: 18px 46px;
+  padding: 18px 66px;
   border-radius: 12px;
 }
 .doctor_section .doctor_form_wrap .form_title span {
@@ -145,7 +144,7 @@ body {
 .doctor_section .doctor_form_wrap .doctor_form_box {
   background: #eef6f1;
   border-radius: 20px;
-  padding: 120px 32px 40px;
+  padding: 120px 32px 52px;
 }
 .doctor_section {
   /* AVATAR */
@@ -153,26 +152,24 @@ body {
 .doctor_section .doctor_avatar {
   text-align: center;
   position: absolute;
-  top: -60px; /* Điều này giúp đẩy avatar trồi lên */
-  left: 100px;
+  top: -72px;
+  left: 108px;
   z-index: 1;
 }
 .doctor_section .doctor_avatar img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   border: 6px solid #fff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
 }
 .doctor_section .doctor_avatar h4 {
-  margin-top: 14px;
   font-size: 20px;
   font-weight: 700;
   color: #0f6038;
 }
 .doctor_section .doctor_avatar p {
-  margin-top: 4px;
   font-size: 14px;
   color: #777;
 }
@@ -373,6 +370,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .doctor_section .doctor_form_wrap .doctor_form_box {
+    background: #eef6f1;
+    border-radius: 20px;
+    padding: 100px 32px 40px;
+  }
   .footer .footer_info {
     padding: 40px 0;
   }
@@ -407,13 +409,29 @@ body {
     row-gap: 16px;
   }
 }
+@media (max-width: 1023px) {
+  .doctor_section .doctor_heading {
+    margin-bottom: 20px;
+  }
+  .doctor_section .doctor_avatar {
+    position: unset;
+    margin-bottom: 80px;
+    margin-top: 24px;
+  }
+}
 @media (max-width: 767px) {
   .doctor_section .doctor_form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .doctor_section .doctor_avatar {
+    position: unset;
+    margin-bottom: 60px;
+  }
   .doctor_section .doctor_form_wrap .form_title {
     width: 75%;
+    padding: 12px 0;
+    top: -36px;
   }
   .doctor_section .doctor_form_wrap .doctor_form_box {
     padding: 100px 16px 40px;
