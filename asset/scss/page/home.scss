@@ -19,14 +19,18 @@ $bg-color:      #f5f5f5;
   }
   .title {
     font-size: 16px;
-    font-weight: 500;
-    margin: 8px 0 12px 0;
+    margin: 8px 0 20px 0;
     display: inline-block;
+    font-weight: 700;
+    color: #0f6038;
+    line-height: 1.4;
   }
   .des {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     display: inline-block;
     text-align: justify;
+    color: #555;
+    line-height: 1.6;
   }
   .more {
     a {
@@ -36,6 +40,128 @@ $bg-color:      #f5f5f5;
     i:hover {
       cursor: pointer;
     }
+  }
+}
+
+
+/* ===== SECTION ===== */
+.health_layout {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* trái hẹp – phải rộng */
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.health_section {
+  padding: 80px 0;
+}
+
+.health_heading {
+  max-width: 420px;
+  margin-bottom: 48px;
+}
+
+.health_heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.health_heading p {
+  margin-top: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.heading_line {
+  width: 48px;
+  height: 4px;
+  background: #0f6038;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+/* ===== GRID LIST ===== */
+.health_list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* ===== CARD ===== */
+.health_card {
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.health_thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.health_title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f6038;
+  line-height: 1.4;
+}
+
+.health_desc {
+  margin-top: 12px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* đẩy nút xuống đáy */
+.health_action {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+/* ===== BUTTON ===== */
+.btn_primary {
+  display: block;
+  width: fit-content;
+  padding: 12px 28px;
+  background: #0f6038;
+  color: #fff;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn_outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 1px solid #0f6038;
+  color: #0f6038;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .health_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .health_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .health_list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -52,6 +178,11 @@ $bg-color:      #f5f5f5;
       padding: 16px;
       border-radius: 16px;
     }
+  }
+  .btn_outline {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
   }
 }
 
