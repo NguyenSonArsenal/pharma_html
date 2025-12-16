@@ -81,6 +81,20 @@ body {
   font-weight: 600;
 }
 
+.btn_submit {
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #9acb45, #006837);
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 .btn_outline {
   display: block;
   padding: 8px 20px;

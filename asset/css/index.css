@@ -137,6 +137,20 @@ body {
   font-weight: 600;
 }
 
+.btn_submit {
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #9acb45, #006837);
+  transition: 0.2s;
+}
+.btn_submit:hover {
+  opacity: 0.9;
+}
+
 .btn_outline {
   display: block;
   padding: 8px 20px;
@@ -584,6 +598,28 @@ body {
   z-index: 1;
 }
 
+/* ===== NAD SECTION ===== */
+.nad_section .nad_layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.nad_section .nad_layout .nad_media img {
+  max-width: 100%;
+}
+.nad_section .nad_layout .nad_content .heading_line {
+  margin: 0 0 30px;
+}
+.nad_section .nad_layout .nad_content .nad_desc {
+  margin: 24px 0 30px;
+}
+.nad_section .nad_layout .nad_content .btn_submit {
+  padding: 12px 32px;
+  border-radius: 24px;
+}
+
+/* ===== END NAD SECTION ===== */
 .section_khung img {
   border-radius: 24px;
   width: 100%;
@@ -727,6 +763,20 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .nad_section .nad_layout {
+    grid-template-columns: 1fr;
+  }
+  .nad_section .nad_layout .nad_content .heading_line {
+    margin: 0 auto 30px;
+  }
+  .nad_section .nad_layout .nad_content h2 {
+    text-align: center;
+  }
+  .nad_section .nad_layout .nad_content .btn_submit {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
   .health_section .health_layout .health_list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
