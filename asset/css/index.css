@@ -153,6 +153,8 @@ body {
 
 .btn_outline {
   display: block;
+  width: fit-content;
+  margin: 0 auto;
   padding: 8px 20px;
   border: 1px solid #0f6038;
   color: #0f6038;
@@ -620,6 +622,53 @@ body {
 }
 
 /* ===== END NAD SECTION ===== */
+/* ===== PRODUCT SECTION ===== */
+.product_section {
+  background: #eef6f1;
+}
+.product_section h2 {
+  margin: 12px 0 8px;
+}
+.product_section .product_list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 48px;
+}
+.product_section .product_list .product_item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.product_section .product_list .product_item .product_thumb {
+  height: 240px;
+  border-radius: 14px;
+  background: #ddd;
+  margin-bottom: 12px;
+}
+.product_section .product_list .product_item .product_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_section .product_list .product_item .product_info .product_name {
+  margin-bottom: 4px;
+}
+.product_section .product_list .product_item .product_info .product_name a {
+  color: #026835;
+}
+.product_section .product_list .product_item .product_info .product_action {
+  font-size: 18px;
+}
+.product_section .product_list .product_item .product_info .product_action:hover {
+  cursor: pointer;
+}
+.product_section .section_action {
+  margin-top: 36px;
+}
+
+/* ===== END PRODUCT SECTION ===== */
 .section_khung img {
   border-radius: 24px;
   width: 100%;
@@ -729,11 +778,6 @@ body {
   display: grid;
   gap: 12px;
 }
-.section_press .btn_outline {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1023px) {
@@ -742,6 +786,9 @@ body {
   }
   .health_section .health_action .btn_outline {
     display: inline-block;
+  }
+  .product_section .product_list .product_item .product_thumb {
+    height: 200px;
   }
 }
 @media (max-width: 991px) {
@@ -777,6 +824,9 @@ body {
     margin: 0 auto;
     display: block;
   }
+  .product_section .product_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .health_section .health_layout .health_list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -805,6 +855,12 @@ body {
 @media (max-width: 575px) {
   .health_thumb img {
     height: 80px;
+  }
+  .product_section .product_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .product_section .product_list .product_item .product_thumb {
+    height: 120px;
   }
   .section_khung img {
     height: 100px;
