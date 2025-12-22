@@ -1,6 +1,9 @@
 $( document ).ready(function() {
   console.log( "ready!" );
+  initExpertSlider();
+});
 
+function initExpertSlider() {
   const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: { delay: 4000, disableOnInteraction: false },
@@ -16,5 +19,4 @@ $( document ).ready(function() {
       768: { slidesPerView: 2, spaceBetween: 24 },
     },
   });
-});
-
+}

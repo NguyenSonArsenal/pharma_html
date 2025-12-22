@@ -623,6 +623,100 @@ body {
 }
 
 /* ===== END NAD SECTION ===== */
+/* ===== CERT SECTION ===== */
+.cert_section {
+  margin: 80px 0;
+}
+.cert_section .cert_section_main {
+  background: #f7f7f7;
+  padding: 44px 44px;
+  border-radius: 48px;
+}
+.cert_section .cert_section_main .section_heading {
+  margin-bottom: 60px;
+}
+.cert_section .cert_section_main .cert_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  align-items: center;
+}
+.cert_section .cert_section_main .cert_grid .cert_item {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.cert_section .cert_section_main .cert_grid .cert_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cert_section .cert_section_main .cert_grid .cert_item.is_big {
+  transform: translateY(-20px);
+}
+@media (hover: hover) {
+  .cert_section .cert_section_main .cert_grid .cert_item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  }
+  .cert_section .cert_section_main .cert_grid .cert_item.is_big:hover {
+    transform: translateY(-20px);
+  }
+}
+.cert_section .cert_section_main {
+  /* Modal */
+}
+.cert_section .cert_section_main .cert_modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+.cert_section .cert_section_main .cert_modal.is_open {
+  display: block;
+}
+.cert_section .cert_section_main .cert_backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cert_section .cert_section_main .cert_dialog {
+  position: relative;
+  max-width: 920px;
+  width: calc(100% - 28px);
+  margin: 6vh auto 0;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.cert_section .cert_section_main .cert_modal_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.cert_section .cert_section_main .cert_close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+/* ===== END CERT SECTION ===== */
 /* ===== PRODUCT SECTION ===== */
 .product_section {
   background: #eef6f1;
@@ -711,11 +805,6 @@ body {
   margin: 32px 0 24px 0px;
 }
 
-.health_heading h2 {
-  font-size: 32px;
-  font-weight: 700;
-}
-
 .health_heading p {
   margin-top: 16px;
   color: #555;
@@ -727,7 +816,6 @@ body {
   height: 4px;
   background: #0f6038;
   border-radius: 4px;
-  margin-top: 12px;
 }
 
 /* ===== GRID LIST ===== */
@@ -769,17 +857,21 @@ body {
   margin-left: 0;
 }
 
+.section_heading {
+  margin-bottom: 40px;
+}
+.section_heading .section_desc {
+  margin-top: 12px;
+}
+
 .section_expert {
-  background: #e5e5e5;
+  background: #eef6f1;
 }
 .section_expert .section_heading {
   margin-bottom: 40px;
 }
 .section_expert .section_heading .heading_line {
   margin-top: 0;
-}
-.section_expert .section_heading .section_desc {
-  margin: 12px 20px;
 }
 .section_expert .experts_slider .swiper-wrapper {
   display: flex;
@@ -895,6 +987,22 @@ body {
   .section_press .news img {
     height: 125px;
   }
+  .cert_section {
+    margin: 40px 0;
+  }
+  .cert_section .cert_section_main {
+    padding: 40px 24px;
+  }
+  .cert_section .cert_section_main .section_heading {
+    margin-bottom: 30px;
+  }
+  .cert_section .cert_section_main .cert_grid {
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cert_section .cert_section_main .cert_grid .cert_item.is_big {
+    transform: translateY(0px);
+  }
 }
 @media (max-width: 767px) {
   .nad_section .nad_layout {
@@ -937,6 +1045,22 @@ body {
   }
   .section_press .news .more a {
     font-size: 13px;
+  }
+  .cert_section {
+    margin: 40px 0;
+  }
+  .cert_section .cert_section_main {
+    padding: 40px 16px;
+    border-radius: 16px;
+  }
+  .cert_section .cert_section_main .section_heading {
+    margin-bottom: 30px;
+  }
+  .cert_section .cert_section_main .cert_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cert_section .cert_section_main .cert_grid .cert_item.is_big {
+    transform: translateY(0px);
   }
 }
 @media (max-width: 575px) {
