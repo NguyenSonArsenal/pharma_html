@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pharma</title>
+  <link rel="icon" type="image/x-icon" href="asset/image/favicon.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="asset/vendor/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="asset/css/index.css">
 </head>
 <body>
@@ -63,7 +65,6 @@
 
   <section class="section product_section">
     <div class="container">
-
       <!-- heading -->
       <div class="section_heading center">
         <div class="heading_line"></div>
@@ -116,7 +117,6 @@
             <div class="product_action" title="Add to card">🛒</div>
           </div>
         </div>
-
       </div>
 
       <!-- button -->
@@ -125,10 +125,88 @@
           Xem tất cả <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
-
     </div>
   </section>
 
+  <section class="section section_expert">
+    <div class="container">
+      <div class="section_heading center">
+        <div class="heading_line"></div>
+        <h2 class="section_title text_xanh text-center">Hội Đồng Chuyên Gia</h2>
+        <p class="section_desc text-center">Hội đồng chuyên gia với chuyên môn cao bảo chứng chất lượng sản phẩm.</p>
+      </div>
+      <div class="experts_slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="expert_card">
+                <div class="expert_top">
+                  <div class="expert_avatar">
+                    <img src="asset/image/user_avatar.png" alt="Phan Toàn Thắng">
+                  </div>
+                  <div class="expert_info">
+                    <h3 class="expert_name">Phan Toàn Thắng</h3>
+                    <p class="expert_meta">PGS, TS, BS</p>
+                  </div>
+                </div>
+                <ul class="expert_list">
+                  <li>Từ 1991 đến 1996, ông công tác tại Viện Bỏng quốc gia.</li>
+                  <li>Từ năm 1997, ông sang làm việc tại Bệnh viện đa khoa Singapore.</li>
+                  <li>Từ năm 2002 đến 2004, ông công tác tại Hagey Laboratory, ĐH Stanford.</li>
+                  <li>Từ 2005 đến nay là giảng viên ĐH Quốc gia Singapore.</li>
+                  <li>Tiên phong nghiên cứu và ứng dụng tế bào gốc tại Việt Nam.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="expert_card">
+                <div class="expert_top">
+                  <div class="expert_avatar">
+                    <img src="asset/image/user_avatar.png" alt="Phan Toàn Thắng">
+                  </div>
+                  <div class="expert_info">
+                    <h3 class="expert_name">Phan Toàn Thắng</h3>
+                    <p class="expert_meta">PGS, TS, BS</p>
+                  </div>
+                </div>
+                <ul class="expert_list">
+                  <li>Từ 1991 đến 1996, ông công tác tại Viện Bỏng quốc gia.</li>
+                  <li>Từ năm 1997, ông sang làm việc tại Bệnh viện đa khoa Singapore.</li>
+                  <li>Từ năm 2002 đến 2004, ông công tác tại Hagey Laboratory, ĐH Stanford.</li>
+                  <li>Từ 2005 đến nay là giảng viên ĐH Quốc gia Singapore.</li>
+                  <li>Tiên phong nghiên cứu và ứng dụng tế bào gốc tại Việt Nam.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="expert_card">
+                <div class="expert_top">
+                  <div class="expert_avatar">
+                    <img src="asset/image/user_avatar.png" alt="Phan Toàn Thắng">
+                  </div>
+                  <div class="expert_info">
+                    <h3 class="expert_name">Phan Toàn Thắng</h3>
+                    <p class="expert_meta">PGS, TS, BS</p>
+                  </div>
+                </div>
+
+                <ul class="expert_list">
+                  <li>Từ 1991 đến 1996, ông công tác tại Viện Bỏng quốc gia.</li>
+                  <li>Từ năm 1997, ông sang làm việc tại Bệnh viện đa khoa Singapore.</li>
+                  <li>Từ năm 2002 đến 2004, ông công tác tại Hagey Laboratory, ĐH Stanford.</li>
+                  <li>Từ 2005 đến nay là giảng viên ĐH Quốc gia Singapore.</li>
+                  <li>Tiên phong nghiên cứu và ứng dụng tế bào gốc tại Việt Nam.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section health_section">
     <div class="container">
@@ -291,19 +369,14 @@
               <div class="form_group required_inline">
                 <input type="text" placeholder="Họ và tên *" required>
               </div>
-
               <div class="form_group">
                 <input type="text" placeholder="Số điện thoại *" required>
               </div>
-
               <div class="form_group">
                 <input type="text" placeholder="Nội dung (không bắt buộc)">
               </div>
-
               <button type="submit" class="btn_submit">ĐĂNG KÝ</button>
-
             </form>
-
           </div>
         </div>
       </div>
@@ -400,6 +473,10 @@
     </div>
   </footer>
 </main>
-
 </body>
+
+<script src="asset/vendor/jquery/jquery-3.7.1.min.js"></script>
+<script src="asset/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="asset/js/home.js"></script>
+
 </html>
