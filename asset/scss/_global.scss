@@ -80,6 +80,10 @@ body {
   border-radius: 16px;
   text-decoration: none;
   font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .btn_submit {
@@ -134,6 +138,35 @@ body {
   }
 }
 
+/* swiper slider */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 !important;
+    opacity: 1;
+    background: rgba(15,106,58,.25);
+  }
+  .swiper-pagination-bullet-active {
+    background: #0f6a3a;
+  }
+}
+.swiper-wrapper {
+  .swiper-slide {
+    height: auto;
+  }
+}
+/* end swiper slider */
+
+.sp {
+  display: none;
+}
+.pc {
+  display: block;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
@@ -152,6 +185,12 @@ body {
   .btn_outline {
     padding: 8px 12px;
     border-radius: 8px;
+  }
+  .sp {
+    display: block;
+  }
+  .pc {
+    display: none;
   }
 }
 
