@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-  console.log( "ready!" );
   initHomeProductGallery();
   initExpertSlider();
 });
@@ -37,8 +36,8 @@ function initHomeProductGallery() {
     },
   });
 
-  const main = new Swiper('.product_main_swiper', {
-    slidesPerView: 1,        // ✅ bắt buộc
+  new Swiper('.product_main_swiper', {
+    slidesPerView: 1,
     spaceBetween: 10,
     speed: 500,
     loop: false,
