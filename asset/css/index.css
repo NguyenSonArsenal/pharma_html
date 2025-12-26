@@ -430,6 +430,9 @@ body {
   align-items: center;
   gap: 10px;
 }
+.header_right button i {
+  color: #000;
+}
 
 .header_icon {
   width: 38px;
@@ -511,7 +514,6 @@ body {
   transform: translateX(100%);
   transition: transform 0.25s ease;
   z-index: 999;
-  box-shadow: -18px 0 40px rgba(0, 0, 0, 0.18);
 }
 
 .header.is_open .header_overlay {
@@ -551,6 +553,11 @@ body {
 }
 
 /* language dropdown */
+.drawer_caret {
+  font-size: 16px;
+  line-height: 16px;
+}
+
 .drawer_lang {
   position: relative;
   margin-bottom: 12px;
@@ -638,10 +645,11 @@ body {
   background: #fff;
   text-align: left;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #111827;
 }
 
 .drawer_sub {
