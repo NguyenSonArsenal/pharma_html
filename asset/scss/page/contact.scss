@@ -85,19 +85,13 @@
   }
 
   .faq_item.is_open {
-    .faq_answer { display: block; }
+    .faq_answer {
+      display: block;
+    }
 
     .faq_icon::before {
       transform: rotate(-135deg);
     }
-  }
-
-  @media (max-width: 767.98px) {
-    .section_heading.center {
-      .section_title { font-size: 26px; }
-    }
-
-    .faq_wrap { max-width: 100%; }
   }
 }
 
@@ -112,6 +106,13 @@
   .cover {
     margin: 32px auto 0;
     border-radius: 16px;
+  }
+  .section_heading.center {
+    .section_title { font-size: 26px; }
+  }
+
+  .faq_wrap {
+    max-width: 100%;
   }
 }
 
