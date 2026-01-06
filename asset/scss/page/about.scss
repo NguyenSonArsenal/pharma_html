@@ -267,7 +267,7 @@
   /* CARD LOGO */
   .member_card {
     position: relative;
-    width: 240px;
+    width: 100%;
     height: 240px;
     border-radius: 16px;
     background: #f4f6f5;
@@ -300,6 +300,9 @@
   @media (max-width: 991.98px) {
     .members_grid {
       grid-template-columns: repeat(2, 1fr);
+      .member_card {
+        width: 100%;
+      }
     }
   }
 
@@ -312,8 +315,8 @@
     }
 
     .member_card {
-      width: 200px;
-      height: 200px;
+      width: 100%;
+      height: 100px;
     }
   }
 }
@@ -426,6 +429,16 @@
   }
   .section_expert_grid .expert_photo img {
     height: 180px;
+  }
+
+  .section_members {
+    .member_col:nth-child(2),
+    .member_col:nth-child(4) {
+      display: grid;
+      .top {
+        order: 2;
+      }
+    }
   }
 }
 

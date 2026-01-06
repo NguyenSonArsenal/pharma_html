@@ -2082,7 +2082,7 @@ body {
 }
 .section_members .member_card {
   position: relative;
-  width: 240px;
+  width: 100%;
   height: 240px;
   border-radius: 16px;
   background: #f4f6f5;
@@ -2113,6 +2113,9 @@ body {
   .section_members .members_grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .section_members .members_grid .member_card {
+    width: 100%;
+  }
 }
 @media (max-width: 575.98px) {
   .section_members {
@@ -2123,8 +2126,8 @@ body {
     gap: 30px;
   }
   .section_members .member_card {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100px;
   }
 }
 
@@ -2225,6 +2228,14 @@ body {
   }
   .section_expert_grid .expert_photo img {
     height: 180px;
+  }
+  .section_members .member_col:nth-child(2),
+  .section_members .member_col:nth-child(4) {
+    display: grid;
+  }
+  .section_members .member_col:nth-child(2) .top,
+  .section_members .member_col:nth-child(4) .top {
+    order: 2;
   }
 }
 
