@@ -1,0 +1,231 @@
+.section_agency {
+  background: $colorXanh;
+  .heading_line {
+    background: white;
+  }
+  .agency_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: center;
+    .agency_item {
+      height: 80px;
+      background: #fff;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(0,0,0,.24);
+      }
+    }
+  }
+}
+
+.section_partner_register {
+  padding: 80px 0;
+  background: #fff;
+
+  .partner_tab_row {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin: 10px 0 18px;
+  }
+  .partner_tab_active {
+    font-weight: 600;
+    color: #111827;
+    position: relative;
+    padding-bottom: 10px;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 180px;
+      height: 3px;
+      background: #0f6a3a;
+      border-radius: 99px;
+    }
+  }
+
+  .partner_tab_line {
+    flex: 1;
+    height: 1px;
+    background: rgba(17,24,39,.25);
+  }
+
+  .partner_form_box {
+    background: #eef6f3;
+    border-radius: 18px;
+    padding: 26px;
+  }
+
+  .partner_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.35fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .form_field {
+    min-width: 0;
+  }
+
+  .form_label {
+    display: block;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+
+  .is_req {
+    color: #ef4444;
+  }
+
+  .form_input,
+  .form_textarea {
+    width: 100%;
+    border: 1px solid rgba(17,24,39,.12);
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+
+  .form_textarea {
+    resize: none;
+    min-height: 44px;
+  }
+
+  .form_input:focus,
+  .form_textarea:focus {
+    border-color: rgba(15,106,58,.55);
+    box-shadow: 0 0 0 4px rgba(15,106,58,.10);
+  }
+
+  .partner_note_row {
+    display: grid;
+    grid-template-columns: 1fr 170px;
+    gap: 18px;
+    margin-top: 14px;
+    align-items: end;
+  }
+
+  .btn_register {
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #fff;
+    background: linear-gradient(135deg, #9bc53d, #3f7f1d);
+    box-shadow: 0 12px 20px rgba(0,0,0,.18);
+  }
+
+  .btn_register:hover {
+    filter: brightness(0.98);
+  }
+
+  .partner_check {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 14px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #374151;
+
+    input {
+      margin-top: 2px;
+      width: 16px;
+      height: 16px;
+      accent-color: #0f6a3a;
+    }
+
+    a {
+      color: #0f6a3a;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    padding: 70px 0;
+
+    .partner_grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .partner_note_row {
+      grid-template-columns: 1fr;
+    }
+
+    .btn_register {
+      width: 180px;
+      justify-self: end;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 60px 0;
+
+    .section_heading.center .section_title {
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .partner_form_box {
+      padding: 18px;
+    }
+
+    .partner_grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .btn_register {
+      width: 100%;
+      justify-self: stretch;
+    }
+
+    .partner_tab_active::after {
+      width: 140px;
+    }
+  }
+}
+
+
+@media (max-width: 991px) {
+  .section_agency {
+    .agency_grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+  .section_agency {
+    .agency_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
