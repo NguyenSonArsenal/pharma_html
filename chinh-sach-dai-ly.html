@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma</title>
+  <link rel="icon" type="image/x-icon" href="asset/image/favicon.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="asset/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="asset/css/index.css">
+</head>
+<body>
+<main class="main">
+  <header class="header">
+    <div class="container">
+      <div class="header_wrap">
+        <!-- LEFT -->
+        <a class="header_logo" href="javascript:void(0);">
+          <img src="asset/image/logo.jpg" alt="Longevity Pharma">
+        </a>
+
+        <!-- CENTER (desktop) -->
+        <div class="header_center">
+          <div class="header_lang">
+            <button class="header_lang_btn" type="button">
+              <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+              <span class="header_lang_text">Tiếng Việt</span>
+              <span class="header_caret">▾</span>
+            </button>
+
+            <div class="header_lang_menu">
+              <button class="header_lang_item is_active" type="button" data-lang="vi">
+                <img src="asset/image/flags/vi.svg" alt="VN">
+                <span>Tiếng Việt</span>
+              </button>
+
+              <button class="header_lang_item" type="button" data-lang="en">
+                <img src="asset/image/flags/en.svg" alt="EN">
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+
+          <span class="header_divider"></span>
+
+          <nav class="header_nav">
+            <a class="header_link is_active" href="#">Trang Chủ</a>
+            <a class="header_link" href="#">Về chúng tôi</a>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Về NMN <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">Giới thiệu NMN</a>
+                <a href="#">Công dụng</a>
+                <a href="#">Câu hỏi thường gặp</a>
+              </div>
+            </div>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Sản phẩm <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">NMNPremium</a>
+                <a href="#">Combo</a>
+              </div>
+            </div>
+
+            <a class="header_link" href="#">Tin tức</a>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Đại lý <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">Chính sách</a>
+                <a href="#">Đăng ký</a>
+              </div>
+            </div>
+
+            <a class="header_link" href="#">Liên hệ</a>
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="header_right">
+          <button class="header_icon" type="button" aria-label="Tìm kiếm">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <button class="header_icon" type="button" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </button>
+
+          <button class="header_icon header_cart" aria-label="Giỏ hàng">
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <span class="header_badge">0</span>
+          </button>
+
+          <!-- Hamburger (mobile) -->
+          <button class="header_toggle" type="button" aria-label="Mở menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay + Drawer -->
+    <div class="header_overlay"></div>
+
+    <aside class="header_drawer" aria-hidden="true">
+      <div class="drawer_head">
+        <div class="drawer_title">Menu</div>
+        <button class="drawer_close" type="button" aria-label="Đóng menu">×</button>
+      </div>
+
+      <div class="drawer_body">
+        <div class="drawer_lang">
+          <button class="drawer_lang_btn" type="button">
+            <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+            <span class="drawer_lang_text">Tiếng Việt</span>
+            <span class="drawer_caret">▾</span>
+          </button>
+
+          <div class="drawer_lang_menu">
+            <button class="drawer_lang_item is_active" type="button" data-lang="vi" data-flag="asset/image/flags/vi.svg">
+              <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+              <span>Tiếng Việt</span>
+            </button>
+
+            <button class="drawer_lang_item" type="button" data-lang="en" data-flag="asset/image/flags/en.svg">
+              <img class="header_flag" src="asset/image/flags/en.svg" alt="EN">
+              <span>English</span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="drawer_nav">
+          <a href="#" class="drawer_link is_active">Trang Chủ</a>
+          <a href="#" class="drawer_link">Về chúng tôi</a>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Về NMN <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">Giới thiệu NMN</a>
+              <a href="#" class="drawer_link">Công dụng</a>
+              <a href="#" class="drawer_link">Câu hỏi thường gặp</a>
+            </div>
+          </div>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Sản phẩm <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">NMNPremium</a>
+              <a href="#" class="drawer_link">Combo</a>
+            </div>
+          </div>
+
+          <a href="#" class="drawer_link">Tin tức</a>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Đại lý <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">Chính sách</a>
+              <a href="#" class="drawer_link">Đăng ký</a>
+            </div>
+          </div>
+
+          <a href="#" class="drawer_link">Liên hệ</a>
+        </nav>
+      </div>
+    </aside>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="heading_line"></div>
+      <div class="doctor_heading">
+        <h2 class="text_center text_xanh mb-2">
+          Chính sách Đại lý
+        </h2>
+      </div>
+      <h4 class="text_xanh mb-2">ĐỒNG HÀNH CÙNG ĐẠI LÝ ĐỂ TĂNG TRƯỞNG DOANH THU</h4>
+      <p class="mb-2">
+        Longevity Pharma được thành lập để cung cấp những giải pháp chăm sóc sức khoẻ toàn diện, ngăn ngừa lão hoá sớm. Với phác đồ cá nhân hoá kết hợp giữa việc sử dụng các sản phẩm như
+        NMNPremium, thực phẩm chức năng, mỹ phẩm và thiết bị chăm sóc tại nhà cùng với chế độ ăn uống, tập luyện hợp lý sẽ mang đến cho khách hàng kết quả tối ưu.
+      </p>
+      <p>
+        Giá trị cốt lõi của chúng tôi là mang đến sản phẩm chất lượng được nghiên cứu bởi chuyên gia và ứng dụng tiến bộ y học để trẻ hoá tế bào, hiệu quả lâm sàng đã được kiểm chứng. Chúng tôi
+        luôn sẵn sàng đồng hành cùng với các đối tác để phát triển thương hiệu và nhân rộng mô hình kinh doanh.
+      </p>
+    </div>
+  </section>
+
+  <section class="section_policy">
+    <div class="container">
+      <div class="policy_top">
+        <div class="policy_top_media">
+          <img src="asset/image/dai-ly/cs1.webp" alt="Đối tác Longevity Pharma">
+        </div>
+
+        <div class="policy_top_box">
+          <h3 class="policy_box_title">Đối tác của chúng tôi là:</h3>
+          <ol class="policy_list">
+            <li>Cửa hàng bán lẻ mỹ phẩm, thực phẩm chức năng cao cấp.</li>
+            <li>Cơ sở spa, viện thẩm mỹ, phòng khám,…</li>
+            <li>Chuỗi gym, yoga, fitness,…</li>
+            <li>Bác sĩ, huấn luyện viên, PT,…</li>
+            <li>KOL, KOC kinh doanh các sản phẩm cao cấp.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- BOTTOM: text left + images right -->
+      <div class="policy_bottom">
+        <div class="policy_content">
+          <h4 class="policy_kicker">Tiềm năng thị trường lớn khi xu hướng chăm sóc sức khoẻ chủ động lên ngôi</h4>
+
+          <div class="policy_block">
+            <h5 class="policy_title_small">Tại sao nên hợp tác cùng Longevity Pharma?</h5>
+            <ol class="policy_ol">
+              <li>Các sản phẩm có nguồn gốc, xuất xứ từ Nhật Bản</li>
+              <li>Sản phẩm chất lượng cao, an toàn, đầy đủ các giấy phép, chứng từ lưu hành được cấp bởi Bộ Y Tế.</li>
+              <li>Hội đồng chuyên gia, bác sĩ chuyên môn cao đồng hành cùng thương hiệu.</li>
+            </ol>
+          </div>
+
+          <div class="policy_block">
+            <h5 class="policy_title_small">Quyền lợi đại lý nhận được:</h5>
+            <ol class="policy_ol">
+              <li>Chiết khấu tốt nhất từ Longevity Pharma.</li>
+              <li>Hỗ trợ đào tạo:
+                <ul class="policy_ul">
+                  <li>Kiến thức và Q&A sản phẩm.</li>
+                  <li>Kỹ năng chốt và upsale sản phẩm bán lẻ.</li>
+                  <li>Đồng hành cùng chương trình, tham gia các chương trình, workshop về kiến thức bán hàng, sản phẩm.</li>
+                </ul>
+              </li>
+              <li>Hỗ trợ PR - Marketing:
+                <ul class="policy_ul">
+                  <li>Hướng dẫn set up kế hoạch, catalogue, standee, sản phẩm mẫu…</li>
+                  <li>Chương trình đại lý chính hãng.</li>
+                  <li>Đăng tải địa chỉ của Đại lý lên website.</li>
+                </ul>
+              </li>
+              <li>Hỗ trợ bán hàng:
+                <ul class="policy_ul">
+                  <li>Hỗ trợ tiếp cận khách hàng tại khu vực.</li>
+                  <li>Hỗ trợ các sự kiện bán hàng, workshop tại địa điểm Đại lý.</li>
+                  <li>Hỗ trợ quà khuyến mãi.</li>
+                </ul>
+              </li>
+              <li>Chính sách khen thưởng, vinh danh:
+                <ul class="policy_ul">
+                  <li>Khen thưởng, vinh danh Đại lý có doanh thu cao theo quý, năm.</li>
+                  <li>Cơ hội du lịch Nhật Bản dành cho Đại lý.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="policy_block">
+            <h5 class="policy_title_small">Quy định chung đối với đại lý:</h5>
+            <ul class="policy_ul">
+              <li>Hỗ trợ phối hợp tổ chức chương trình, sự kiện với Longevity Pharma.</li>
+              <li>Không kinh doanh sản phẩm không rõ nguồn gốc, xuất xứ.</li>
+              <li>Không sử dụng hình ảnh, thương hiệu của Longevity Pharma để phân phối sản phẩm của các thương hiệu khác.</li>
+              <li>Bán đúng giá niêm yết do thương hiệu Longevity Pharma đưa ra.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="policy_side">
+          <div class="policy_side_img">
+            <img src="asset/image/dai-ly/cs2.webp" alt="Hợp tác">
+          </div>
+          <div class="policy_side_img">
+            <img src="asset/image/dai-ly/cs3.webp" alt="Đào tạo - đồng hành">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section doctor_section">
+    <div class="container">
+      <div class="heading_line"></div>
+      <div class="doctor_heading">
+        <h2 class="text_xanh text_center">
+          Đội Ngũ Bác Sĩ Giàu Chuyên Môn Luôn Sẵn Sàng Hỗ Trợ Bạn
+        </h2>
+        <p class="text_center">
+          Nếu bạn đang có thắc mắc về bệnh của mình hay sản phẩm.
+        </p>
+      </div>
+      <div class="doctor_card">
+        <div class="doctor_avatar">
+          <img src="asset/image/user_avatar.png" alt="Bác sĩ chuyên môn">
+          <h4>Nguyễn Tiến Dũng</h4>
+          <p>Cố vấn chuyên môn</p>
+        </div>
+
+        <div class="doctor_form_wrap">
+          <div class="form_title">
+            <h3>ĐĂNG KÝ TƯ VẤN</h3>
+            <span>(Hoàn toàn miễn phí)</span>
+          </div>
+
+          <div class="doctor_form_box">
+            <form class="doctor_form">
+              <div class="form_group required_inline">
+                <input type="text" placeholder="Họ và tên *" required>
+              </div>
+              <div class="form_group">
+                <input type="text" placeholder="Số điện thoại *" required>
+              </div>
+              <div class="form_group">
+                <input type="text" placeholder="Nội dung (không bắt buộc)">
+              </div>
+              <button type="submit" class="btn_submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer_info">
+      <div class="container">
+        <h2 class="text_xanh">LONGEVITY MEDICAL CENTER</h2>
+        <div class="footer_info_main">
+          <div class="footer_info_main-item">
+            <div>
+              <i class="social-icon fa-solid fa-location-dot"></i>
+            </div>
+            <div><b>Địa chỉ:</b> 59 Ngô Thì Nhậm, Phường Hai Bà Trưng, Thành phố Hà Nội</div>
+          </div>
+          <div class="footer_info_main-item">
+            <div>
+              <i class="social-icon fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <div>Nếu có thắc mắc hoặc cần hỗ trợ</div>
+              <div><b>Liên hệ ngay:</b> 0559 188 888</div>
+            </div>
+          </div>
+          <div class="footer_info_main-item">
+            <div><i class="social-icon fa-solid fa-clock"></i></div>
+            <div>
+              <b>Giờ mở cửa</b> <br>
+              <span>08:00 - 17:00 (thứ Hai đến thứ Bảy)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer_top">
+          <div class="footer-newsletter">
+            <p class="footer-text fw-medium color-xanh">
+              Theo dõi tin tức về sản phẩm và thông tin khoa học mới nhất của chúng tôi
+            </p>
+
+            <form class="footer-form">
+              <input type="email" placeholder="Nhập Email của bạn"/>
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+
+            <div class="footer-social">
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-facebook-f"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-youtube"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-tiktok"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-phone"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-store"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4 class="footer-title">SẢN PHẨM</h4>
+              <a href="#">Chống Lão Hóa</a>
+              <a href="#">Miễn Dịch</a>
+              <a href="#">Dược Mỹ Phẩm</a>
+              <a href="#">Dưỡng Sinh Trị Liệu</a>
+              <a href="#">Thiết Bị Làm Đẹp</a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-title">THƯƠNG HIỆU</h4>
+              <a href="#">Về Chúng Tôi</a>
+              <a href="#">Về NMN</a>
+              <a href="#">Hội Đồng Chuyên Gia</a>
+              <a href="#">Tin Tức</a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-title">CHÍNH SÁCH</h4>
+              <a href="#">Chính sách bảo mật</a>
+              <a href="#">Chính sách giao hàng</a>
+              <a href="#">Chính sách bảo hành</a>
+              <a href="#">Quy định sử dụng</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <!-- Bottom -->
+        <div class="footer_bottom text_center font-medium text_xanh">
+          Copy right by © 2024–2025 LONGEVITY PHARMA, Inc.
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+
+<script src="asset/vendor/jquery/jquery-3.7.1.min.js"></script>
+<script src="asset/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="asset/js/common.js"></script>
+<script src="asset/js/contact.js"></script>
+
+</html>
