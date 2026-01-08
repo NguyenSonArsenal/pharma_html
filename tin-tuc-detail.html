@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma</title>
+  <link rel="icon" type="image/x-icon" href="asset/image/favicon.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="asset/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="asset/css/index.css">
+</head>
+<body>
+<main class="main">
+  <header class="header">
+    <div class="container">
+      <div class="header_wrap">
+        <!-- LEFT -->
+        <a class="header_logo" href="javascript:void(0);">
+          <img src="asset/image/logo.jpg" alt="Longevity Pharma">
+        </a>
+
+        <!-- CENTER (desktop) -->
+        <div class="header_center">
+          <div class="header_lang">
+            <button class="header_lang_btn" type="button">
+              <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+              <span class="header_lang_text">Tiếng Việt</span>
+              <span class="header_caret">▾</span>
+            </button>
+
+            <div class="header_lang_menu">
+              <button class="header_lang_item is_active" type="button" data-lang="vi">
+                <img src="asset/image/flags/vi.svg" alt="VN">
+                <span>Tiếng Việt</span>
+              </button>
+
+              <button class="header_lang_item" type="button" data-lang="en">
+                <img src="asset/image/flags/en.svg" alt="EN">
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+
+          <span class="header_divider"></span>
+
+          <nav class="header_nav">
+            <a class="header_link is_active" href="#">Trang Chủ</a>
+            <a class="header_link" href="#">Về chúng tôi</a>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Về NMN <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">Giới thiệu NMN</a>
+                <a href="#">Công dụng</a>
+                <a href="#">Câu hỏi thường gặp</a>
+              </div>
+            </div>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Sản phẩm <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">NMNPremium</a>
+                <a href="#">Combo</a>
+              </div>
+            </div>
+
+            <a class="header_link" href="#">Tin tức</a>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Đại lý <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">Chính sách</a>
+                <a href="#">Đăng ký</a>
+              </div>
+            </div>
+
+            <a class="header_link" href="#">Liên hệ</a>
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="header_right">
+          <button class="header_icon" type="button" aria-label="Tìm kiếm">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <button class="header_icon" type="button" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </button>
+
+          <button class="header_icon header_cart" aria-label="Giỏ hàng">
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <span class="header_badge">0</span>
+          </button>
+
+          <!-- Hamburger (mobile) -->
+          <button class="header_toggle" type="button" aria-label="Mở menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay + Drawer -->
+    <div class="header_overlay"></div>
+
+    <aside class="header_drawer" aria-hidden="true">
+      <div class="drawer_head">
+        <div class="drawer_title">Menu</div>
+        <button class="drawer_close" type="button" aria-label="Đóng menu">×</button>
+      </div>
+
+      <div class="drawer_body">
+        <div class="drawer_lang">
+          <button class="drawer_lang_btn" type="button">
+            <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+            <span class="drawer_lang_text">Tiếng Việt</span>
+            <span class="drawer_caret">▾</span>
+          </button>
+
+          <div class="drawer_lang_menu">
+            <button class="drawer_lang_item is_active" type="button" data-lang="vi" data-flag="asset/image/flags/vi.svg">
+              <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+              <span>Tiếng Việt</span>
+            </button>
+
+            <button class="drawer_lang_item" type="button" data-lang="en" data-flag="asset/image/flags/en.svg">
+              <img class="header_flag" src="asset/image/flags/en.svg" alt="EN">
+              <span>English</span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="drawer_nav">
+          <a href="#" class="drawer_link is_active">Trang Chủ</a>
+          <a href="#" class="drawer_link">Về chúng tôi</a>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Về NMN <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">Giới thiệu NMN</a>
+              <a href="#" class="drawer_link">Công dụng</a>
+              <a href="#" class="drawer_link">Câu hỏi thường gặp</a>
+            </div>
+          </div>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Sản phẩm <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">NMNPremium</a>
+              <a href="#" class="drawer_link">Combo</a>
+            </div>
+          </div>
+
+          <a href="#" class="drawer_link">Tin tức</a>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Đại lý <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">Chính sách</a>
+              <a href="#" class="drawer_link">Đăng ký</a>
+            </div>
+          </div>
+
+          <a href="#" class="drawer_link">Liên hệ</a>
+        </nav>
+      </div>
+    </aside>
+  </header>
+
+  <section class="news_page">
+    <div class="container">
+
+      <div class="section_heading_center">
+        <span class="heading_line"></span>
+        <h2 class="section_title">Tin tức</h2>
+        <p class="section_desc">Cập nhật các thông tin, kiến thức hữu ích cho sức khỏe của chúng tôi tại đây.</p>
+      </div>
+
+      <!-- tabs -->
+      <div class="news_tabs">
+        <button class="news_tab is_active" type="button">Tất cả</button>
+        <button class="news_tab" type="button">Sức khỏe &amp; đời sống</button>
+        <button class="news_tab" type="button">Báo chí</button>
+        <button class="news_tab" type="button">Sự kiện</button>
+      </div>
+
+      <!-- tools -->
+      <div class="news_tools">
+        <div class="news_search">
+          <span class="news_search_icon">🔍</span>
+          <input class="news_search_input" type="text" placeholder="Tìm kiếm bài viết">
+        </div>
+
+        <div class="news_filters">
+          <div class="news_select">
+            <select class="news_select_field">
+              <option>Sắp xếp theo Mới nhất</option>
+              <option>Sắp xếp theo Cũ nhất</option>
+              <option>Sắp xếp theo A-Z</option>
+            </select>
+          </div>
+
+          <div class="news_select">
+            <select class="news_select_field">
+              <option>Lọc theo danh mục</option>
+              <option>Sức khỏe &amp; đời sống</option>
+              <option>Báo chí</option>
+              <option>Sự kiện</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- list -->
+      <div class="news_grid">
+        <!-- item -->
+        <article class="news_card">
+          <a class="news_thumb" href="#">
+            <img src="asset/image/news/1.webp" alt="News 1">
+          </a>
+
+          <div class="news_body">
+            <div class="news_date">28 tháng 11 năm 2025</div>
+            <h3 class="news_title">
+              <a href="#">Thực hư tác dụng đảo ngược lão hóa của hoạt chất NMN</a>
+            </h3>
+            <p class="news_excerpt">
+              Hiện nay nhiều sản phẩm chứa thành phần NMN được quảng cáo có tác dụng đảo ngược lão hóa...
+            </p>
+
+            <a class="news_more" href="#">Xem chi tiết <span>›</span></a>
+          </div>
+        </article>
+
+        <article class="news_card">
+          <a class="news_thumb" href="#">
+            <img src="asset/image/news/2.webp" alt="News 2">
+          </a>
+          <div class="news_body">
+            <div class="news_date">28 tháng 11 năm 2025</div>
+            <h3 class="news_title"><a href="#">Hỗ trợ gia đình phòng ngừa ho và cảm lạnh</a></h3>
+            <p class="news_excerpt">Ho và cảm lạnh là một số bệnh phổ biến nhất ở cả người lớn và trẻ em...</p>
+            <a class="news_more" href="#">Xem chi tiết <span>›</span></a>
+          </div>
+        </article>
+
+        <article class="news_card">
+          <a class="news_thumb" href="#">
+            <img src="asset/image/news/3.webp" alt="News 3">
+          </a>
+          <div class="news_body">
+            <div class="news_date">28 tháng 11 năm 2025</div>
+            <h3 class="news_title"><a href="#">Sống không còn lo lắng về vấn đề dạ dày</a></h3>
+            <p class="news_excerpt">Bệnh dạ dày gây khó chịu cho cơ thể, ảnh hưởng đến sinh hoạt hằng ngày...</p>
+            <a class="news_more" href="#">Xem chi tiết <span>›</span></a>
+          </div>
+        </article>
+
+        <!-- copy thêm items giống vậy -->
+      </div>
+
+      <!-- paging -->
+      <div class="news_paging">
+        <a class="paging_prev" href="#">← Trang trước</a>
+        <div class="paging_nums">
+          <a class="paging_num is_active" href="#">1</a>
+          <a class="paging_num" href="#">2</a>
+          <a class="paging_num" href="#">3</a>
+          <span class="paging_dots">…</span>
+          <a class="paging_num" href="#">4</a>
+        </div>
+        <a class="paging_next" href="#">Trang sau →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer_info">
+      <div class="container">
+        <h2 class="text_xanh">LONGEVITY MEDICAL CENTER</h2>
+        <div class="footer_info_main">
+          <div class="footer_info_main-item">
+            <div>
+              <i class="social-icon fa-solid fa-location-dot"></i>
+            </div>
+            <div><b>Địa chỉ:</b> 59 Ngô Thì Nhậm, Phường Hai Bà Trưng, Thành phố Hà Nội</div>
+          </div>
+          <div class="footer_info_main-item">
+            <div>
+              <i class="social-icon fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <div>Nếu có thắc mắc hoặc cần hỗ trợ</div>
+              <div><b>Liên hệ ngay:</b> 0559 188 888</div>
+            </div>
+          </div>
+          <div class="footer_info_main-item">
+            <div><i class="social-icon fa-solid fa-clock"></i></div>
+            <div>
+              <b>Giờ mở cửa</b> <br>
+              <span>08:00 - 17:00 (thứ Hai đến thứ Bảy)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer_top">
+          <div class="footer-newsletter">
+            <p class="footer-text fw-medium color-xanh">
+              Theo dõi tin tức về sản phẩm và thông tin khoa học mới nhất của chúng tôi
+            </p>
+
+            <form class="footer-form">
+              <input type="email" placeholder="Nhập Email của bạn"/>
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+
+            <div class="footer-social">
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-facebook-f"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-youtube"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-tiktok"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-phone"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-store"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4 class="footer-title">SẢN PHẨM</h4>
+              <a href="#">Chống Lão Hóa</a>
+              <a href="#">Miễn Dịch</a>
+              <a href="#">Dược Mỹ Phẩm</a>
+              <a href="#">Dưỡng Sinh Trị Liệu</a>
+              <a href="#">Thiết Bị Làm Đẹp</a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-title">THƯƠNG HIỆU</h4>
+              <a href="#">Về Chúng Tôi</a>
+              <a href="#">Về NMN</a>
+              <a href="#">Hội Đồng Chuyên Gia</a>
+              <a href="#">Tin Tức</a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-title">CHÍNH SÁCH</h4>
+              <a href="#">Chính sách bảo mật</a>
+              <a href="#">Chính sách giao hàng</a>
+              <a href="#">Chính sách bảo hành</a>
+              <a href="#">Quy định sử dụng</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <!-- Bottom -->
+        <div class="footer_bottom text_center font-medium text_xanh">
+          Copy right by © 2024–2025 LONGEVITY PHARMA, Inc.
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+
+<script src="asset/vendor/jquery/jquery-3.7.1.min.js"></script>
+<script src="asset/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="asset/js/common.js"></script>
+<script src="asset/js/contact.js"></script>
+
+</html>
