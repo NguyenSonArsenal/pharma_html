@@ -3176,7 +3176,7 @@ section .doctor_heading {
   background: #fff;
 }
 .login_page .login_row {
-  margin: 8px 0 16px;
+  margin: 8px 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3323,7 +3323,7 @@ section .doctor_heading {
   gap: 16px;
 }
 .register_page .register_note {
-  margin: 14px 0 18px;
+  margin: 14px 0 24px;
   line-height: 1.7;
   color: #6b7280;
 }
@@ -3379,6 +3379,201 @@ section .doctor_heading {
   }
   .register_page .form_group.full {
     grid-column: span 1;
+  }
+}
+
+.account_page {
+  padding: 44px 0 90px;
+  background: #f3f3f3;
+}
+.account_page .account_breadcrumb {
+  color: #6b7280;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.account_page .account_wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 26px;
+  align-items: start;
+}
+.account_page {
+  /* ===== SIDEBAR ===== */
+}
+.account_page .account_sidebar {
+  display: grid;
+  gap: 14px;
+}
+.account_page .account_profile {
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a3cf3b, #0f6a3a);
+  padding: 22px 18px;
+  text-align: center;
+  color: #fff;
+}
+.account_page .account_avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  margin: 0 auto 10px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.account_page .account_avatar img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.account_page .account_name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.account_page .account_phone {
+  font-size: 13px;
+  opacity: 0.95;
+  margin-top: 4px;
+}
+.account_page .account_menu {
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+.account_page .account_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 14px;
+  color: #111827;
+  text-decoration: none;
+  border-top: 1px solid #eef0f2;
+}
+.account_page .account_item:first-child {
+  border-top: 0;
+}
+.account_page .account_item .account_icon {
+  width: 20px;
+  display: inline-flex;
+  justify-content: center;
+}
+.account_page .account_item .account_arrow {
+  margin-left: auto;
+  color: #9ca3af;
+  font-size: 18px;
+}
+.account_page .account_item:hover {
+  background: rgba(15, 106, 58, 0.06);
+}
+.account_page .account_item.is_active {
+  color: #0f6a3a;
+  font-weight: 500;
+}
+.account_page .account_item.is_active .account_arrow {
+  color: #0f6a3a;
+}
+.account_page {
+  /* ===== CONTENT ===== */
+}
+.account_page .account_panel {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 22px 26px;
+}
+.account_page .account_panel_head {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+.account_page .account_title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+}
+.account_page .account_info {
+  text-align: center;
+}
+.account_page .account_info_avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  margin: 8px auto 18px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.account_page .account_info_avatar img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+.account_page .account_info_grid {
+  max-width: 460px;
+  margin: 0 auto;
+}
+.account_page .info_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+.account_page .info_label {
+  font-size: 14px;
+  color: #374151;
+}
+.account_page .info_value {
+  font-weight: 500;
+  text-align: right;
+}
+.account_page .account_actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+.account_page .btn_account {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #0f6a3a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 10px 22px rgba(15, 106, 58, 0.22);
+}
+.account_page {
+  /* ===== RESPONSIVE ===== */
+}
+@media (max-width: 991.98px) {
+  .account_page .account_wrap {
+    grid-template-columns: 1fr;
+  }
+  .account_page .account_sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575.98px) {
+  .account_page {
+    padding: 30px 0 70px;
+  }
+  .account_page .account_panel {
+    padding: 16px;
+  }
+  .account_page .info_row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .account_page .info_value {
+    text-align: left;
+    font-weight: 500;
   }
 }
 
