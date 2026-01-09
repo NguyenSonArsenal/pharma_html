@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma</title>
+  <link rel="icon" type="image/x-icon" href="asset/image/favicon.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="asset/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="asset/css/index.css">
+</head>
+<body>
+<main class="main">
+  <header class="header">
+    <div class="container">
+      <div class="header_wrap">
+        <!-- LEFT -->
+        <a class="header_logo" href="javascript:void(0);">
+          <img src="asset/image/logo.jpg" alt="Longevity Pharma">
+        </a>
+
+        <!-- CENTER (desktop) -->
+        <div class="header_center">
+          <div class="header_lang">
+            <button class="header_lang_btn" type="button">
+              <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+              <span class="header_lang_text">Tiếng Việt</span>
+              <span class="header_caret">▾</span>
+            </button>
+
+            <div class="header_lang_menu">
+              <button class="header_lang_item is_active" type="button" data-lang="vi">
+                <img src="asset/image/flags/vi.svg" alt="VN">
+                <span>Tiếng Việt</span>
+              </button>
+
+              <button class="header_lang_item" type="button" data-lang="en">
+                <img src="asset/image/flags/en.svg" alt="EN">
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+
+          <span class="header_divider"></span>
+
+          <nav class="header_nav">
+            <a class="header_link is_active" href="#">Trang Chủ</a>
+            <a class="header_link" href="#">Về chúng tôi</a>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Về NMN <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">Giới thiệu NMN</a>
+                <a href="#">Công dụng</a>
+                <a href="#">Câu hỏi thường gặp</a>
+              </div>
+            </div>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Sản phẩm <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">NMNPremium</a>
+                <a href="#">Combo</a>
+              </div>
+            </div>
+
+            <a class="header_link" href="#">Tin tức</a>
+
+            <div class="header_dropdown">
+              <a class="header_link" href="#">Đại lý <span class="header_caret">▾</span></a>
+              <div class="header_menu">
+                <a href="#">Chính sách</a>
+                <a href="#">Đăng ký</a>
+              </div>
+            </div>
+
+            <a class="header_link" href="#">Liên hệ</a>
+          </nav>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="header_right">
+          <button class="header_icon" type="button" aria-label="Tìm kiếm">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <button class="header_icon" type="button" aria-label="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </button>
+
+          <button class="header_icon header_cart" aria-label="Giỏ hàng">
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <span class="header_badge">0</span>
+          </button>
+
+          <!-- Hamburger (mobile) -->
+          <button class="header_toggle" type="button" aria-label="Mở menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay + Drawer -->
+    <div class="header_overlay"></div>
+
+    <aside class="header_drawer" aria-hidden="true">
+      <div class="drawer_head">
+        <div class="drawer_title">Menu</div>
+        <button class="drawer_close" type="button" aria-label="Đóng menu">×</button>
+      </div>
+
+      <div class="drawer_body">
+        <div class="drawer_lang">
+          <button class="drawer_lang_btn" type="button">
+            <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+            <span class="drawer_lang_text">Tiếng Việt</span>
+            <span class="drawer_caret">▾</span>
+          </button>
+
+          <div class="drawer_lang_menu">
+            <button class="drawer_lang_item is_active" type="button" data-lang="vi" data-flag="asset/image/flags/vi.svg">
+              <img class="header_flag" src="asset/image/flags/vi.svg" alt="VN">
+              <span>Tiếng Việt</span>
+            </button>
+
+            <button class="drawer_lang_item" type="button" data-lang="en" data-flag="asset/image/flags/en.svg">
+              <img class="header_flag" src="asset/image/flags/en.svg" alt="EN">
+              <span>English</span>
+            </button>
+          </div>
+        </div>
+
+        <nav class="drawer_nav">
+          <a href="#" class="drawer_link is_active">Trang Chủ</a>
+          <a href="#" class="drawer_link">Về chúng tôi</a>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Về NMN <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">Giới thiệu NMN</a>
+              <a href="#" class="drawer_link">Công dụng</a>
+              <a href="#" class="drawer_link">Câu hỏi thường gặp</a>
+            </div>
+          </div>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Sản phẩm <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">NMNPremium</a>
+              <a href="#" class="drawer_link">Combo</a>
+            </div>
+          </div>
+
+          <a href="#" class="drawer_link">Tin tức</a>
+
+          <div class="drawer_group">
+            <button class="drawer_parent" type="button">
+              Đại lý <span class="drawer_caret">▾</span>
+            </button>
+            <div class="drawer_sub">
+              <a href="#" class="drawer_link">Chính sách</a>
+              <a href="#" class="drawer_link">Đăng ký</a>
+            </div>
+          </div>
+
+          <a href="#" class="drawer_link">Liên hệ</a>
+        </nav>
+      </div>
+    </aside>
+  </header>
+
+  <section class="product_detail_hero">
+    <div class="container">
+      <div class="product_detail_hero_wrap">
+
+        <!-- LEFT: GALLERY -->
+        <div class="product_detail_gallery">
+          <div class="product_gallery_box">
+
+            <!-- MAIN -->
+            <div class="product_main_swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product_main_item">
+                    <img src="asset/image/home/product/1.webp" alt="NMNPremium 1">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product_main_item">
+                    <img src="asset/image/home/product/2.webp" alt="NMNPremium 2">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product_main_item">
+                    <img src="asset/image/home/product/3.webp" alt="NMNPremium 3">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product_main_item">
+                    <img src="asset/image/home/product/4.webp" alt="NMNPremium 4">
+                  </div>
+                </div>
+              </div>
+
+              <div class="product_pagination swiper-pagination"></div>
+            </div>
+
+            <!-- THUMBS -->
+            <div class="product_thumbs_swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <button class="thumb_item" type="button">
+                      <img src="asset/image/home/product/1.webp" alt="Thumb 1">
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button class="thumb_item" type="button">
+                      <img src="asset/image/home/product/2.webp" alt="Thumb 2">
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button class="thumb_item" type="button">
+                      <img src="asset/image/home/product/3.webp" alt="Thumb 3">
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button class="thumb_item" type="button">
+                      <img src="asset/image/home/product/4.webp" alt="Thumb 4">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="product_detail_info">
+          <div class="product_meta_top">SẢN PHẨM / CHỐNG LÃO HÓA</div>
+
+          <h2 class="product_title">NMNPREMIUM (90 VIÊN)</h2>
+
+          <div class="product_price_row">
+            <div class="product_price">5.000.000 <span>VND</span></div>
+
+            <div class="product_rating">
+              <div class="rating_stars" aria-label="4.8/5">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="rating_count">17 nhận xét</div>
+            </div>
+          </div>
+
+          <div class="product_divider"></div>
+
+          <div class="product_desc">
+            <p>
+              NMNPremium là giải pháp chăm sóc sức khoẻ toàn diện đến từ Nhật Bản. Với sự kết hợp của
+              NMN, Vitamin C và Coenzyme Q10, NMNPremium hỗ trợ chống oxy hoá mạnh, bảo vệ tế bào
+              khỏi gốc tự do và tăng cường sức đề kháng.
+            </p>
+            <p>
+              Sử dụng NMN đều đặn, thường xuyên giúp cơ thể khoẻ khoắn, dẻo dai, duy trì sự tươi trẻ
+              và giảm thiểu nguy cơ lão hoá sớm.
+            </p>
+          </div>
+
+          <div class="product_divider"></div>
+
+          <label class="product_qty_label" for="qty">Số lượng</label>
+
+          <div class="product_actions">
+            <select id="qty" class="product_qty">
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3" selected>03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+            </select>
+
+            <button class="btn_primary" type="button">MUA NGAY</button>
+            <button class="btn_outline" type="button">THÊM VÀO GIỎ HÀNG</button>
+          </div>
+
+          <div class="product_divider"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="product_detail_info_section">
+    <div class="container">
+      <div class="product_detail_info_wrap">
+        <!-- LEFT -->
+        <div class="product_detail_left">
+          <!-- Box: Thông tin sản phẩm -->
+          <div class="detail_box">
+            <div class="detail_box_head">
+              <h3 class="detail_box_title">Thông tin sản phẩm</h3>
+              <span class="detail_box_line"></span>
+            </div>
+
+            <div class="detail_content">
+              <ul class="detail_list">
+                <li>Tên sản phẩm: Thực phẩm bảo vệ sức khoẻ NMNPremium</li>
+                <li>Xuất xứ: Nhật Bản</li>
+                <li>HSD: 36 tháng kể từ ngày sản xuất</li>
+                <li>Dạng bào chế: Viên nang cứng</li>
+              </ul>
+
+              <div class="detail_block">
+                <h4 class="detail_block_title">THÀNH PHẦN CHÍNH</h4>
+                <p class="detail_text">Mỗi viên nang cứng có chứa:</p>
+                <ul class="detail_list">
+                  <li>Nicotinamide Mononucleotide (NMN) 300mg</li>
+                  <li>Vitamin C (Acid ascorbic) 60mg</li>
+                  <li>Coenzyme Q10 10mg</li>
+                </ul>
+                <p class="detail_text">
+                  Phụ liệu: Chất làm dày (Dextrin), Vỏ nang HPMC, Silicon dioxide.
+                </p>
+              </div>
+
+              <div class="detail_block">
+                <h4 class="detail_block_title">CÔNG DỤNG</h4>
+                <ul class="detail_checklist">
+                  <li><i class="fa-solid fa-check"></i> Hỗ trợ chống Oxy hoá</li>
+                  <li><i class="fa-solid fa-check"></i> Hỗ trợ tăng cường sức đề kháng</li>
+                  <li><i class="fa-solid fa-check"></i> Hỗ trợ cải thiện tình trạng lão hoá da</li>
+                </ul>
+
+                <p class="detail_note">
+                  Đây là thực phẩm hỗ trợ sức khoẻ, không phải là thuốc, không thay thế thuốc chữa bệnh!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box: Hỏi đáp -->
+          <div class="detail_box">
+            <div class="qa_top">
+              <div class="qa_head">
+                <h3 class="detail_box_title qa_title">Hỏi đáp</h3>
+                <p class="qa_desc">
+                  Quý khách vui lòng để lại câu hỏi. Longevity Pharma sẽ trả lời ngay sau đó.
+                  Các câu hỏi sau 22h - 8h sẽ được trả lời vào sáng hôm sau.
+                </p>
+              </div>
+
+              <button class="qa_send_btn" type="button">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Gửi</span>
+              </button>
+            </div>
+
+            <form class="qa_form">
+              <div class="qa_row">
+                <input class="qa_input" type="text" placeholder="Họ và tên*">
+                <input class="qa_input" type="tel" placeholder="Số điện thoại*">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="product_detail_right">
+          <div class="featured_box">
+            <div class="featured_head">
+              <h3 class="featured_title">Sản phẩm nổi bật</h3>
+              <span class="featured_line"></span>
+            </div>
+
+            <div class="featured_list">
+              <a class="featured_item" href="#">
+                <div class="featured_thumb"></div>
+                <div class="featured_info">
+                  <div class="featured_name">NMNPremium</div>
+                  <div class="featured_desc">Hỗ trợ chống lão hoá, tăng cường sức đề kháng.</div>
+                </div>
+              </a>
+
+              <a class="featured_item" href="#">
+                <div class="featured_thumb"></div>
+                <div class="featured_info">
+                  <div class="featured_name">NMNPremium</div>
+                  <div class="featured_desc">Hỗ trợ chống lão hoá, tăng cường sức đề kháng.</div>
+                </div>
+              </a>
+
+              <a class="featured_item" href="#">
+                <div class="featured_thumb"></div>
+                <div class="featured_info">
+                  <div class="featured_name">NMNPremium</div>
+                  <div class="featured_desc">Hỗ trợ chống lão hoá, tăng cường sức đề kháng.</div>
+                </div>
+              </a>
+
+              <a class="featured_item" href="#">
+                <div class="featured_thumb"></div>
+                <div class="featured_info">
+                  <div class="featured_name">NMNPremium</div>
+                  <div class="featured_desc">Hỗ trợ chống lão hoá, tăng cường sức đề kháng.</div>
+                </div>
+              </a>
+
+              <a class="featured_item" href="#">
+                <div class="featured_thumb"></div>
+                <div class="featured_info">
+                  <div class="featured_name">NMNPremium</div>
+                  <div class="featured_desc">Hỗ trợ chống lão hoá, tăng cường sức đề kháng.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer_info">
+      <div class="container">
+        <h2 class="text_xanh">LONGEVITY MEDICAL CENTER</h2>
+        <div class="footer_info_main">
+          <div class="footer_info_main-item">
+            <div>
+              <i class="social-icon fa-solid fa-location-dot"></i>
+            </div>
+            <div><b>Địa chỉ:</b> 59 Ngô Thì Nhậm, Phường Hai Bà Trưng, Thành phố Hà Nội</div>
+          </div>
+          <div class="footer_info_main-item">
+            <div>
+              <i class="social-icon fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <div>Nếu có thắc mắc hoặc cần hỗ trợ</div>
+              <div><b>Liên hệ ngay:</b> 0559 188 888</div>
+            </div>
+          </div>
+          <div class="footer_info_main-item">
+            <div><i class="social-icon fa-solid fa-clock"></i></div>
+            <div>
+              <b>Giờ mở cửa</b> <br>
+              <span>08:00 - 17:00 (thứ Hai đến thứ Bảy)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer_top">
+          <div class="footer-newsletter">
+            <p class="footer-text fw-medium color-xanh">
+              Theo dõi tin tức về sản phẩm và thông tin khoa học mới nhất của chúng tôi
+            </p>
+
+            <form class="footer-form">
+              <input type="email" placeholder="Nhập Email của bạn"/>
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+
+            <div class="footer-social">
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-facebook-f"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-youtube"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fab fa-tiktok"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-phone"></i></a>
+              <a href="javascript:void(0)" class="social-item"><i class="fas fa-store"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4 class="footer-title">SẢN PHẨM</h4>
+              <a href="#">Chống Lão Hóa</a>
+              <a href="#">Miễn Dịch</a>
+              <a href="#">Dược Mỹ Phẩm</a>
+              <a href="#">Dưỡng Sinh Trị Liệu</a>
+              <a href="#">Thiết Bị Làm Đẹp</a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-title">THƯƠNG HIỆU</h4>
+              <a href="#">Về Chúng Tôi</a>
+              <a href="#">Về NMN</a>
+              <a href="#">Hội Đồng Chuyên Gia</a>
+              <a href="#">Tin Tức</a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-title">CHÍNH SÁCH</h4>
+              <a href="#">Chính sách bảo mật</a>
+              <a href="#">Chính sách giao hàng</a>
+              <a href="#">Chính sách bảo hành</a>
+              <a href="#">Quy định sử dụng</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <!-- Bottom -->
+        <div class="footer_bottom text_center font-medium text_xanh">
+          Copy right by © 2024–2025 LONGEVITY PHARMA, Inc.
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+
+<script src="asset/vendor/jquery/jquery-3.7.1.min.js"></script>
+<script src="asset/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="asset/js/common.js"></script>
+<script src="asset/js/san-pham.js"></script>
+
+</html>
